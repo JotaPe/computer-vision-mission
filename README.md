@@ -2,7 +2,7 @@
 
 ### Using Python and Keras
 
-Requirements: Anaconda, Keras, urllib3 and BeautifulSoup
+Requirements: Anaconda, Keras, urllib3, BeautifulSoup and Fire
 
 ### Using convolutional networks to do image classification
 

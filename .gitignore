@@ -1,7 +1,11 @@
 data/train/*
 data/validation/*
 data/test/*
+data/preview/*
 
 !data/train/.gitkeep
 !data/validation/.gitkeep
 !data/test/.gitkeep
+!data/preview/.gitkeep
+
+__pycache__
