@@ -1,7 +1,7 @@
-data/train/*
-data/validation/*
-data/test/*
-data/preview/*
+!data/train/*
+!data/validation/*
+!data/test/*
+!data/preview/*
 
 !data/train/.gitkeep
 !data/validation/.gitkeep
@@ -9,3 +9,4 @@ data/preview/*
 !data/preview/.gitkeep
 
 __pycache__
+.ipynb_checkpoints
