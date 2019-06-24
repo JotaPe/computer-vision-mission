@@ -2,7 +2,11 @@
 
 ### Using Python and Keras
 
-Requirements: Anaconda, Keras, urllib3, BeautifulSoup, Fire and Pillow
+Requirements: Anaconda
+
+    $ conda install --yes --file requirements.txt
+    # or to install all dependencies
+    $ while read requirements; do conda install --yes $requirement; done < requirements.txt
 
 ### Using convolutional networks to do image classification
 
@@ -25,7 +29,9 @@ url, not posts.
 
 Example: https://www.airliners.net/search
 
-On source file you already have some example links.
+On source file you already have some example links. With variable names:
+
+    URL_TAM | URL_UNITED_AIRLINERS | URL_DELTA | URL_UNTITLED
 
 DON'T PUT SAME COMPANY IN VALIDATION AND TEST, THIS ARE MEANT TO DIFFERENT COMPANIES OR RANDOM IMAGES
 
@@ -33,7 +39,7 @@ Now we need to start the convolutional network script.
 
     $ python -i convnet.py
     >>> train()
-    # Wait to finish training
+    >>> # Wait to finish training
     >>> model = load_trained_model("model_saved.h5")
 
 And to test new images
