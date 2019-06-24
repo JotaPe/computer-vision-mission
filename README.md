@@ -29,22 +29,12 @@ On source file you already have some example links.
 
 DON'T PUT SAME COMPANY IN VALIDATION AND TEST, THIS ARE MEANT TO DIFFERENT COMPANIES OR RANDOM IMAGES
 
-Because this test have a small dataset, to evade overfitting we can use Keras
-ImageDataGenerator from his preprocessing libraries
-
-This is going to generate random edited images, is good to have a GPU because
-this is going to use TensorFlow to do it and generate a lot of files, you just
-need to run this script after the scrapper.
-
-    $ python image_train_generator.py
-    # After this load the validation generator too
-    $ python image_validation_generator.py
-
-I have done in this way to not need user input to use in different folders.
-
 Now we need to start the convolutional network script.
 
     $ python -i convnet.py
+    >>> train()
+    # Wait to finish training
+    >>> model = load_trained_model("model_saved.h5")
 
 And to test new images
 
