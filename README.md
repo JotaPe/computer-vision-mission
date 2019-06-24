@@ -4,9 +4,11 @@
 
 Requirements: Anaconda
 
-    $ conda install --yes --file requirements.txt
-    # or to install all dependencies
-    $ while read requirements; do conda install --yes $requirement; done < requirements.txt
+``` sh
+$ conda install --yes --file requirements.txt
+# or to install all dependencies
+$ while read requirements; do conda install --yes $requirement; done < requirements.txt
+```
 
 ### Using convolutional networks to do image classification
 
@@ -18,8 +20,10 @@ multiple dimensions data, like images.
 To start simply create your own environment on Anaconda
 after that install keras and load in order the scripts:
 
-    $ python -i scrapper.py
-    >>> airliner_scrapper(URL_AIRLINER, COMPANY_NAME))
+``` python-console
+$ python -i scrapper.py
+>>> airliner_scrapper(URL_AIRLINER, COMPANY_NAME))
+```
 
 This script will start downloading multiple files in data/train,
 so do you need to copy some files to validation and test.
@@ -37,13 +41,17 @@ DON'T PUT SAME COMPANY IN VALIDATION AND TEST, THIS ARE MEANT TO DIFFERENT COMPA
 
 Now we need to start the convolutional network script.
 
-    $ python -i convnet.py
-    >>> train()
-    >>> # Wait to finish training
-    >>> model = load_trained_model("model_saved.h5")
+``` sh
+$ python -i convnet.py
+>>> train()
+>>> # Wait to finish training
+>>> model = load_trained_model("model_saved.h5")
+```
 
 And to test new images
 
-    >>> test_image(image_path)
+``` python-console
+>>> test_image(image_path)
+```
 
 You will receive the class number that it was predicted by the model trained.
