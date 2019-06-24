@@ -2,7 +2,7 @@
 
 ### Using Python and Keras
 
-Requirements: Anaconda, Keras, urllib3, BeautifulSoup and Fire
+Requirements: Anaconda, Keras, urllib3, BeautifulSoup, Fire and Pillow
 
 ### Using convolutional networks to do image classification
 
@@ -46,4 +46,8 @@ Now we need to start the convolutional network script.
 
     $ python -i convnet.py
 
-Results on WORK IN PROGRESS.
+And to test new images
+
+    >>> test_image(image_path)
+
+You will receive the class number that it was predicted by the model trained.

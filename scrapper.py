@@ -19,7 +19,7 @@ URL_DELTA = "https://www.airliners.net/search?airline=18647&photoCategory=23&sor
 URL_UNTITLED = "https://www.airliners.net/search?airline=58641&photoCategory=23&sortBy=dateAccepted&sortOrder=desc&perPage=36&display=detail"
 
 
-def airliner_scrapper(url, company_name):
+def airliner_scrapper(url, company_name, folder):
     """
     Receiver a URL(string) and a Airliner Name(string)
     the airliner name is used to be the name in the start of the file
@@ -36,7 +36,7 @@ def airliner_scrapper(url, company_name):
         i += 1
         image_url = image['src']
         pbar.update(1)
-        file_path = f"data/train/{company_name}{i}.jpeg"
+        file_path = f"{folder}/{company_name}{i}.jpeg"
         with HTTP.request("GET", image_url, preload_content=False) as res:
             with open(file_path, "wb") as out_file:
                 shutil.copyfileobj(res, out_file)
